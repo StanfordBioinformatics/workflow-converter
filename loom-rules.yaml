@@ -1,0 +1,24 @@
+workflow: loom
+version: x.x.x
+items:
+  name:
+  command:
+  environment:
+    docker_image:
+sets:
+  inputs:
+    channel:
+    type:
+    data:
+      contents:
+  outputs:
+    channel:
+    type:
+    source:
+
+static_values:
+  outputs:
+    - channel: output_text
+      type: string
+      source:
+        stream: stdout

@@ -1,0 +1,29 @@
+name: 1st-tool
+command: echo {{message}}
+environment:                  # not in CWL
+  docker_image: ubuntu:latest # not in CWL
+inputs:                       # {{inputs}}
+  - channel: message          # {{id}}
+    type: string              # {{type}}
+    data:                     # not in CWL
+      contents: hello         # {{message}}
+outputs:                      # {{outputs}}
+  - channel: output_text      # not in CWL
+    type: string              # not in CWL
+    source:                   # not in CWL
+      stream: stdout          # not in CWL
+
+
+
+
+
+
+cwlVersion: cwl:draft-3	# not added to loom
+class: CommandLineTool	# not added to loom(?)
+baseCommand: echo				# first argument of "command" line
+inputs:									# same as loom "inputs" section
+  - id: message					# loom "channel"
+    type: string			  # loom "type"
+    inputBinding:
+      position: 1			  # indicates where argument will be placed on "command" line (?)
+outputs: []							# same as loom "outputs"
