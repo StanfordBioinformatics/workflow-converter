@@ -38,3 +38,11 @@ workflow before export
 * If the export rules require attributes not defined in stored workflow, 
 program should throw error
 * Should also have a function that compares conv
+
+### Development Roadmap
+* Get sample CWL input
+* Create sample Loom output
+* Write Loom rules yaml file
+* Write an input function that simply imports yaml files
+* Write an output function that can parse Loom rules & create output
+
