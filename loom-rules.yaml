@@ -1,8 +1,5 @@
-workflow: loom
-version: x.x.x
 items:
-  name:
-  command:
+  command: {{baseCommand}} {{@messages}}
   environment:
     docker_image:
 sets:
@@ -15,8 +12,19 @@ sets:
     channel:
     type:
     source:
+sequence:
+  messages:
+    set: inputs
+      - id: message
+        type: string
+    sortBy: inputBinding:position
+    delim: " "
+
 
 static_values:
+  workflow: loom
+  name: 1st-tool
+  version: x.x.x
   outputs:
     - channel: output_text
       type: string

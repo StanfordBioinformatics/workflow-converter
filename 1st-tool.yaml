@@ -1,3 +1,4 @@
+# Loom
 name: 1st-tool
 command: echo {{message}}
 environment:                  # not in CWL
@@ -14,10 +15,7 @@ outputs:                      # {{outputs}}
       stream: stdout          # not in CWL
 
 
-
-
-
-
+# CWL
 cwlVersion: cwl:draft-3	# not added to loom
 class: CommandLineTool	# not added to loom(?)
 baseCommand: echo				# first argument of "command" line
